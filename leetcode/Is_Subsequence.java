@@ -9,7 +9,6 @@ class Is_Subsequence {
         int i=0;
         int j = 0;
         int count = 0;
-        
         while (i < n1 && j < n2) {
             if (t.charAt(i) == s.charAt(j)) {
                 count++;
@@ -17,9 +16,6 @@ class Is_Subsequence {
             }
             i++;
         }
-        
         System.out.print(count==n2);
-        
-
     }
 }
