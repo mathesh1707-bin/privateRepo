@@ -6,7 +6,7 @@ class Is_Subsequence {
         String t = sc.nextLine();
         int n2 = s.length();
         int n1 = t.length();
-        int i=0;
+        int i = 0;
         int j = 0;
         int count = 0;
         while (i < n1 && j < n2) {
@@ -16,6 +16,7 @@ class Is_Subsequence {
             }
             i++;
         }
-        System.out.print(count==n2);
+        System.out.print(count == n2);
+
     }
 }
