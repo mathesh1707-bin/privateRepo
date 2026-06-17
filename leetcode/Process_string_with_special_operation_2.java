@@ -3,22 +3,43 @@ import java.util.*;
 public class Process_string_with_special_operation_2 {
     
     public static char processStr(String s, long k) {
-        StringBuilder str=new StringBuilder();
-        int len = str.length();
-        for (int i = 0; i < len; i++) {
-            char ch = s.charAt(i);
+        long len = 0;
+        for (char ch : s.toCharArray()) {
             if (ch >= 'a' && ch <= 'z') {
-                str.append(ch);
+                len++;
             } else if (ch == '#') {
-                str.append(str.toString());
-            } else if (ch == '%') {
-                str.reverse();
+                len *= 2;
             } else if (ch == '*') {
-                str.deleteCharAt(str.length() - 1);
+                if (len > 0)
+                    len--;
             }
         }
-        return str.charAt((int)k);
+        if (k >= len) {
+            return '.';
+        }
+        for (int i = s.length() - 1; i >= 0; i--) {
+            char ch = s.charAt(i);
+            if (ch >= 'a' && ch <= 'z') {
+                if (k == len - 1) {
+                    return ch;
+                }
+                len--;
+            } else if (ch == '#') {
+                len /= 2;
+                if (k >= len) {
+                    k -= len;
+                }
+            } else if (ch == '%') {
+                k = len - 1 - k;
+            } else if (ch == '*') {
+                len++;
+                if (k == len - 1) {
+                    return '.';
+                }
+            }
+        }
         
+            return '.';
     }    
 
     public static void main(String[] args) {
