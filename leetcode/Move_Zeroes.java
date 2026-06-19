@@ -1,7 +1,8 @@
 import java.util.*;
 public class Move_Zeroes {
     public static void moveZeroes(int[] nums) {
-        int n=nums.length;
+        int n = nums.length;
+        
         int left=0;
         int right=0;
         while (right <= n - 1) {
