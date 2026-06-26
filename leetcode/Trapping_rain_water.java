@@ -26,10 +26,12 @@ public class Trapping_rain_water {
 
         rightMax[n - 1] = height[n - 1];
         for (int i = n - 2; i >= 0; i--) {
+            
             rightMax[i] = Math.max(rightMax[i + 1], height[i]);
         }
 
         long water = 0;
+
 
         for (int i = 0; i < n; i++) {
             water += Math.min(leftMax[i], rightMax[i]) - height[i];
