@@ -1,19 +1,14 @@
 import java.util.*;
 public class Move_Zeroes {
     public static void moveZeroes(int[] nums) {
-        int n = nums.length;
-        
-        int left=0;
-        int right=0;
-        while (right <= n - 1) {
-            if (nums[right] == 0) {
-                right++;
-            } else if (nums[right] != 0) {
-                int temp = nums[right];
-                nums[right] = nums[left];
-                nums[left] = temp;
-                left++;
-                right++;
+        int n=nums.length;
+        int i=0;
+        for(int j=0;j<n;j++){
+            if(nums[j]!=0){
+                int temp=nums[i];
+                nums[i]=nums[j];
+                nums[j]=temp;
+                i++;
             }
         }
         
