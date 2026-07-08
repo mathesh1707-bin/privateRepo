@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.*; 
 class Solution {
     public int majorityElement(int[] nums) {
         int n=nums.length;
