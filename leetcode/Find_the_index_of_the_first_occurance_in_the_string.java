@@ -8,6 +8,7 @@ class Solution {
             for(j=0;j<n;j++){
                 if(str.charAt(i+j)!=pat.charAt(j)){
                     break;
+        
                 }
             }
             if(j==n){
@@ -16,4 +17,5 @@ class Solution {
         }
     return -1;
     }
+    
 }
