@@ -43,7 +43,7 @@ class Solution {
         }
         List<List<Integer>> result=new ArrayList<>();
         for(int h=0;h<m;h++){
-            List<Integer> row=new ArrayList<>();
+            Listc<Integer> row=new ArrayList<>();
             for(int g=0;g<n;g++){
                 row.add(nums[h*n+g]);
             }
