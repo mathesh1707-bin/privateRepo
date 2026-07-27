@@ -1,24 +1,24 @@
 package Placement;
 
-import java.util.Scanner;
-
-public class ValidDays {
+import java.util.*;
+class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String str = sc.nextLine();
         int n = str.length();
-        str.toLowerCase();
+        str=str.toLowerCase();
         if (str.equals("monday")) {
-            System.out.println("x");
+            System.out.println("Express 1");
         }
         else if (str.equals("tuesday")) {
-            System.out.println("y");
+            System.out.println("Rapid 2");
         }
         else if (str.equals("wednesday")) {
-            System.out.println("z");
+            System.out.println("Swift 3");
         }
         else if (str.equals("thursday")) {
-            System.out.println("a");
+            System.out.println("Lightning 4");
+            
         }
         else {
             System.out.println("Invalid day");
@@ -26,3 +26,5 @@ public class ValidDays {
 
     }
 }
+
+
