@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello World!</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+         Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </p>
+
+    <!-- ul>li*5{Item $ } -->
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li> 
+        <li>Item 3</li> 
+        <li>Item 4</li> 
+        <li>Item 5</li> 
+    </ul>
+
+    <!-- ul#items>li.list-item*5{List Item $} -->
+    <ul id="items">
+        <li class="list-item">List Item 1</li>
+        <li class="list-item">List Item 2</li>
+        <li class="list-item">List Item 3</li>
+        <li class="list-item">List Item 4</li>
+        <li class="list-item">List Item 5</li>
+    </ul>
+
+    <!-- form#loginform>div.form-group*2+button:submit.btn{Login} -->
+     <form action="" id="loginform">
+        <div class="form-group"></div>
+        <div class="form-group"></div>
+        <button type="submit" class="btn">Login</button>
+     </form>
+     
+<!-- form#loginfrom>(div.form-group*2>label+input[name=" "][id=" "])+button:submit.btn{Login} -->
+    <form action="" id="loginform">
+        <div class="form-group">
+            <label for="" class="div1">
+
+            </label>
+            <input type="text" name="" id="">
+        </div>
+        <div class="form-group">
+            <label for="" class="div1">
+
+            </label>
+            <input type="text" name="" id="">
+        </div>
+        <button type="submit" class="btn">Login</button>
+    </form>
+
+</body>
+</html>
