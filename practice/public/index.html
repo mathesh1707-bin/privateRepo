@@ -4,54 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
+    <link rel="stylesheet" href="style.css">
+    </head>
 <body>
-    <h1>Hello World!</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-         Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    </p>
-
-    <!-- ul>li*5{Item $ } -->
-    <ul>
-        <li>Item 1</li>
-        <li>Item 2</li> 
-        <li>Item 3</li> 
-        <li>Item 4</li> 
-        <li>Item 5</li> 
-    </ul>
-
-    <!-- ul#items>li.list-item*5{List Item $} -->
-    <ul id="items">
-        <li class="list-item">List Item 1</li>
-        <li class="list-item">List Item 2</li>
-        <li class="list-item">List Item 3</li>
-        <li class="list-item">List Item 4</li>
-        <li class="list-item">List Item 5</li>
-    </ul>
-
-    <!-- form#loginform>div.form-group*2+button:submit.btn{Login} -->
-     <form action="" id="loginform">
-        <div class="form-group"></div>
-        <div class="form-group"></div>
-        <button type="submit" class="btn">Login</button>
-     </form>
-     
-<!-- form#loginfrom>(div.form-group*2>label+input[name=" "][id=" "])+button:submit.btn{Login} -->
-    <form action="" id="loginform">
-        <div class="form-group">
-            <label for="" class="div1">
-
-            </label>
-            <input type="text" name="" id="">
+    <script src="index.js"></script>
+    <nav>
+        <h3>LearnCode</h3>
+        <ul >
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#Cources">Cources</a></li>
+            <li><a href="#About">About</a></li>
+            <li><a href="#Contact">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="main">
+    <h1 >Learn Web Development</h1>
+    <p>Build Amazing Websites using HTML, CSS, and JavaScript</p><br/>
+    <button class="button-1">Start Learning</button>
+    </div>
+    <br/> <br/>
+    <div class="cards">
+        <div class="card">
+        <h3>Easy Lessons</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, expedita.</p>
         </div>
-        <div class="form-group">
-            <label for="" class="div1">
-
-            </label>
-            <input type="text" name="" id="">
+        <div class="card">
+        <h3>Projects</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, expedita.</p>
         </div>
-        <button type="submit" class="btn">Login</button>
-    </form>
+        <div class="card">
+        <h3>Certificates</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, expedita.</p>
+        </div>
+    </div>
 
+    <section class="footer">
+        <p>&copy; 2023 LearnCode. All rights reserved.</p>
+    </section>
 </body>
 </html>
