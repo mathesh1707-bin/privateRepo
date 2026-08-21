@@ -15,7 +15,7 @@ class Solution {
                 break;
             }
         }
-        Setv<Integer>set=new HashSet<>();
+        Set<Integer>set=new HashSet<>();
         for(int num:nums){
             set.add(num);
         }
