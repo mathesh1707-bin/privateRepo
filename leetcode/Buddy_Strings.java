@@ -1,3 +1,7 @@
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+
 class Solution {
     public boolean buddyStrings(String s, String goal) {
         int n=s.length();
