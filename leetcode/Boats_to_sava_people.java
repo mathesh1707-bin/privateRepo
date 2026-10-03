@@ -1,5 +1,4 @@
 //881. Boats to Save People 
-
 //#Attemp1 - more complex ifs and else ifs
 class Solution {
 public int numRescueBoats(int[] people, int limit) {
