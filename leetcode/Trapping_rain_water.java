@@ -1,43 +1,56 @@
-import java.util.*;
-public class Trapping_rain_water {
-  
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+//42. Trapping Rain Water
+//Approach 1 : 1ms
+class Solution1 {
+    public int trap(int[] arr) {
+        int n=arr.length;
+        int [] left=new int [n];
+        int [] right=new int [n];
+        int l=Integer.MIN_VALUE;
+        int r=Integer.MIN_VALUE;
 
-        int n = sc.nextInt();
-        int[] height = new int[n];
-
-        for (int i = 0; i < n; i++) {
-            height[i] = sc.nextInt();
+        for(int i=0;i<n;i++){
+            if(arr[i]>l){
+                l=arr[i];
+            }
+            left[i]=l;
         }
-
-        if (n <= 2) {
-            System.out.print(0);
-            return;
+        for(int i=n-1;i>=0;i--){
+            if(arr[i]>r){
+                r=arr[i];
+            }
+            right[i]=r;
         }
-
-        int[] leftMax = new int[n];
-        int[] rightMax = new int[n];
-
-        leftMax[0] = height[0];
-        for (int i = 1; i < n; i++) {
-            leftMax[i] = Math.max(leftMax[i - 1], height[i]);
+        int [] min=new int [n];
+        int sum=0;
+        for(int i=0;i<n;i++){
+            min[i]=Math.min(left[i],right[i]);
+            sum+=min[i]-arr[i];
         }
-
-        rightMax[n - 1] = height[n - 1];
-        for (int i = n - 2; i >= 0; i--) {
-            
-            rightMax[i] = Math.max(rightMax[i + 1], height[i]);
+        return sum;
         }
-
-        long water = 0;
-
-
-        for (int i = 0; i < n; i++) {
-            water += Math.min(leftMax[i], rightMax[i]) - height[i];
-        }
-
-        System.out.print(water);
-    }
 }
 
+//#Attempt 2: 0ms Payaluga 
+class Solution2 {
+    public int trap(int[] arr) {
+        int n=arr.length;
+        int left=0;
+        int right=n-1;
+        int leftMax=arr[left];
+        int rightMax=arr[right];
+        int ans=0;
+        while(left<right){
+            if(leftMax<rightMax){
+                left++;
+                leftMax=Math.max(leftMax,arr[left]);
+                ans+=leftMax-arr[left];
+            }
+            else{
+                right--;
+                rightMax=Math.max(rightMax,arr[right]);
+                ans+=rightMax-arr[right];
+            }
+        }
+        return ans;
+        }
+}
