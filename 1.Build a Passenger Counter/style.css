@@ -1,0 +1,22 @@
+body{
+    text-align: center;
+}
+button{
+    border: none;
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#increment-btn{
+    background-color: darkred;
+}
+#decrement-btn{
+    background-color: darkgreen;
+}
+#save-btn{
+    background-color: darkblue;
+}
